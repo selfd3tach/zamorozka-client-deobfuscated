@@ -5,23 +5,23 @@ import skid.gay.sex.spermix.inside.shalopay.features.module.Module;
 import skid.gay.sex.spermix.inside.shalopay.features.module.ModuleCategory;
 
 public class JesusPack extends Module {
-   public JesusPack() {
-      super("JesusPack", 0, ModuleCategory.PLAYER);
-   }
+    public JesusPack() {
+        super("JesusPack", 0, ModuleCategory.PLAYER);
+    }
 
-   public void h() {
-      if (this.c()) {
-         Minecraft var10000 = mc;
-         if (Minecraft.player.isInWater()) {
-            var10000 = mc;
-            if (!Minecraft.player.isCollidedHorizontally) {
-               var10000 = mc;
-               Minecraft.player.motionY = 0.1D;
-               var10000 = mc;
-               Minecraft.player.onGround = true;
+    public void onUpdate() {
+        if (this.getState()) {
+            Minecraft var10000 = mc;
+            if (Minecraft.player.isInWater()) {
+                var10000 = mc;
+                if (!Minecraft.player.isCollidedHorizontally) {
+                    var10000 = mc;
+                    Minecraft.player.motionY = 0.1D;
+                    var10000 = mc;
+                    Minecraft.player.onGround = true;
+                }
             }
-         }
-      }
+        }
 
-   }
+    }
 }

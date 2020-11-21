@@ -1,18 +1,18 @@
 package skid.gay.sex.spermix.inside.shalopay.features.idk;
 
 public class TimeUtils {
-   
-   private long a = -1L;
 
-   public void a() {
-      this.a = this.b();
-   }
+    private long a = -1L;
 
-   public boolean a(float var1) {
-      return (float)(this.b() - this.a) >= var1;
-   }
+    public void a() {
+        this.a = this.b();
+    }
 
-   protected long b() {
-      return System.currentTimeMillis();
-   }
+    public boolean a(float var1) {
+        return (float) (this.b() - this.a) >= var1;
+    }
+
+    protected long b() {
+        return System.currentTimeMillis();
+    }
 }

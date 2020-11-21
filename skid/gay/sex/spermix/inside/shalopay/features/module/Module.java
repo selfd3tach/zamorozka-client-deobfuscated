@@ -1,97 +1,92 @@
 package skid.gay.sex.spermix.inside.shalopay.features.module;
 
-import skid.gay.sex.spermix.inside.shalopay.features.idk.n;
 import net.minecraft.client.Minecraft;
+import skid.gay.sex.spermix.inside.shalopay.features.idk.n;
 
 public class Module {
-   
-   private static boolean f;
-   
-   protected int a;
-   
-   private String d;
-   
-   protected boolean b;
-   
-   private ModuleCategory e;
-   
-   public static Minecraft mc = Minecraft.getMinecraft();
 
-   public int l() {
-      return this.a;
-   }
+    public static Minecraft mc = Minecraft.getMinecraft();
+    private static boolean toggled;
+    protected int keyBind;
+    protected boolean state;
+    private final String name;
+    private final ModuleCategory moduleCategory;
 
-   public boolean a(String var1) {
-      return true;
-   }
+    public Module(String name, int keyBind, ModuleCategory category) {
+        this.name = name;
+        this.keyBind = keyBind;
+        this.moduleCategory = category;
+        this.initModule();
+    }
 
-   public boolean a(boolean var1) {
-      this.e();
-      if (var1) {
-         n.c();
-         this.f();
-         this.b = true;
-      } else {
-         this.g();
-         this.b = false;
-      }
+    public int getKeyBind() {
+        return this.keyBind;
+    }
 
-      return var1;
-   }
+    public boolean a() {
+        return true;
+    }
 
-   public String a() {
-      return this.d;
-   }
+    public boolean a(boolean var1) {
+        this.e();
+        if (var1) {
+            n.c();
+            this.onEnable();
+            this.state = true;
+        } else {
+            this.onDisable();
+            this.state = false;
+        }
 
-   public boolean c() {
-      return this.b;
-   }
+        return var1;
+    }
 
-   public void g() {
-   }
+    public String getName() {
+        return this.name;
+    }
 
-   public void k() {
-      f = !f;
-      this.e();
-      if (f) {
-         this.f();
-      } else {
-         this.g();
-      }
+    public boolean getState() {
+        return this.state;
+    }
 
-   }
+    public void onDisable() {
+    }
 
-   public void f() {
-   }
+    public void getToggled() {
+        toggled = !toggled;
+        this.e();
+        if (toggled) {
+            this.onEnable();
+        } else {
+            this.onDisable();
+        }
 
-   public void i() {
-   }
+    }
 
-   public ModuleCategory b() {
-      return this.e;
-   }
+    public void onEnable() {
+    }
 
-   public void j() {
-   }
+    public void onRender() {
+    }
 
-   public void e() {
-   }
+    public ModuleCategory getModuleCategory() {
+        return this.moduleCategory;
+    }
 
-   public void a(int var1) {
-      this.a = var1;
-   }
+    public void initModule() {
+    }
 
-   public void d() {
-      this.a(!this.c());
-   }
+    public void e() {
+    }
 
-   public Module(String name, int keyBind, ModuleCategory category) {
-      this.d = name;
-      this.a = keyBind;
-      this.e = category;
-      this.j();
-   }
+    public void a(int var1) {
+        this.keyBind = var1;
+    }
 
-   public void h() {
-   }
+    public void d() {
+        this.a(!this.getState());
+    }
+
+    public void onUpdate() {
+    }
 }
