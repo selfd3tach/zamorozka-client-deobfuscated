@@ -4,11 +4,11 @@ import skid.gay.sex.spermix.inside.shalopay.features.module.Module;
 import skid.gay.sex.spermix.inside.shalopay.features.module.ModuleCategory;
 
 public class Mirror extends Module {
-   public Mirror() {
-      super("Mirror", 0, ModuleCategory.RENDER2);
-   }
+    public Mirror() {
+        super("Mirror", 0, ModuleCategory.RENDER2);
+    }
 
-   public void h() {
-      this.c();
-   }
+    public void onUpdate() {
+        this.getState();
+    }
 }

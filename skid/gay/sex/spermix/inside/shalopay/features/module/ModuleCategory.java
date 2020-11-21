@@ -1,35 +1,31 @@
 package skid.gay.sex.spermix.inside.shalopay.features.module;
 
 public enum ModuleCategory {
-   
-   WORLD,
 
-   HUDMODE,
+    WORLD,
 
-   RENDER,
+    RENDER,
 
-   MOVEMENT,
+    MOVEMENT,
 
-   EXPLOIT,
+    EXPLOIT,
 
-   PLAYER,
+    PLAYER,
 
-   COMBAT,
+    COMBAT,
 
-   SMTHLIKEBIPAS,
+    SMTHLIKEBIPAS,
 
-   RENDER2,
+    RENDER2,
 
-   OTHER,
+    OTHER,
 
-   HUD,
+    PLAYER2;
 
-   PLAYER2;
-
-   public static ModuleCategory[] a() {
-      ModuleCategory[] var0;
-      int var1;
-      ModuleCategory[] var2 = new ModuleCategory[0];
-      return var2;
-   }
+    public static ModuleCategory[] a() {
+        ModuleCategory[] var0;
+        int var1;
+        ModuleCategory[] var2 = new ModuleCategory[0];
+        return var2;
+    }
 }
